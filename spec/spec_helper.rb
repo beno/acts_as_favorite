@@ -59,7 +59,7 @@ end
 
 
 def clean_database
-  models = []
+  models = [ActsAsFavourite::Favouriter, Favouriter, Favourable, NotFavourable, NotFavouriter, OtherFavourable]
   models.each do |model|
     ActiveRecord::Base.connection.execute "DELETE FROM #{model.table_name}"
   end
