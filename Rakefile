@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "acts_as_favourite"
   gem.homepage = "http://github.com/IvoReis/acts_as_favourite"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Acts as favourite gem}
+  gem.description = %Q{Simple gem that adds functionality to the active record, is possible to add a object to a favourite list}
   gem.email = "reis.ivo@gmail.com"
   gem.authors = ["Ivo Reis"]
   # dependencies defined in Gemfile
@@ -33,7 +33,7 @@ end
 
 RSpec::Core::RakeTask.new(:rcov) do |spec|
   spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov = true
+  #spec.rcov = true
 end
 
 task :default => :spec
