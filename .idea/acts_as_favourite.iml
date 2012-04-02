@@ -9,16 +9,19 @@
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v3.2.2, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v3.0.2, /home/dasssss/.rvm/gems/ruby-1.9.3-p0@bootstrap/gems/arel-3.0.2) [path][gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.0, /home/dasssss/.rvm/gems/ruby-1.9.3-p0@social2/gems/builder-3.0.0) [path][gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.0.22, /home/dasssss/.rvm/gems/ruby-1.9.3-p0@social2/gems/bundler-1.0.22) [path][gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.1.0, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.1.3, /home/dasssss/.rvm/gems/ruby-1.9.2-p290@rails3/gems/diff-lcs-1.1.3) [path][gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="git (v1.2.5, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.0, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="json (v1.6.5, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.1.0, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jeweler (v1.8.3, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.6.6, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.2.0, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rake (v0.9.2.2, /home/dasssss/.rvm/gems/ruby-1.9.3-p0@bootstrap/gems/rake-0.9.2.2) [path][gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rspec (v2.8.0, /home/dasssss/.rvm/gems/ruby-1.9.2-p290@diaspora/gems/rspec-2.8.0) [path][gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v2.8.0, /home/dasssss/.rvm/gems/ruby-1.9.2-p290@diaspora/gems/rspec-core-2.8.0) [path][gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.8.0, /home/dasssss/.rvm/gems/ruby-1.9.2-p290@diaspora/gems/rspec-expectations-2.8.0) [path][gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v2.8.0, /home/dasssss/.rvm/gems/ruby-1.9.2-p290@diaspora/gems/rspec-mocks-2.8.0) [path][gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec (v2.9.0, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v2.9.0, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.9.0, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v2.9.0, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v0.3.32, RVM: ruby-1.9.3-p0 [project]) [gem]" level="application" />
   </component>
 </module>

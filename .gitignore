@@ -2,7 +2,7 @@
 coverage
 coverage.data
 
-.idea*
+.idea
 
 # rdoc generated
 rdoc
