@@ -30,13 +30,13 @@ describe "ActsAsFavourite" do
     end
 
     describe :Favourable do
-      it "should return false if its not favoured by a favouriter" do
-        (@favourable.favoured_by? @favouriter).should be false
+      it "should return false if is not favoured by the favouriter" do
+        (@favourable.favoured_by? @favouriter).should be_false
       end
 
       it "should return true if its favoured by a favouriter" do
         @favouriter.favor @favourable
-        (@favourable.favoured_by? @favouriter).should be true
+        (@favourable.favoured_by? @favouriter).should be_true
       end
 
       it "should increment the times favoured" do

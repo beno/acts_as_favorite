@@ -24,7 +24,6 @@ module ActsAsFavourite
         else
           false
         end
-
       end
 
       def favoured_by? favouriter

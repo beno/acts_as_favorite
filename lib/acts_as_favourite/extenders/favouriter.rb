@@ -2,16 +2,24 @@ module ActsAsFavourite
   module Extenders
     module Favouriter
 
+      # Get conditions where includes the actual model
+      # @return [Hash] with the conditions
       def self_conditions
         {:favouriter_id => self.id,:favouriter_type => self.class.base_class.name.to_s}
       end
 
+      # Favor a given item
+      # @param [Favourable] favourable that is favouring this item
+      # @param [Hash] args
+      # @return [Bool]
       def favor favourable, args={}
         favourable.favor self, args
       end
 
       # favourites type: "Photo" - photos
       # favourites - all
+      # List the favourites
+      # @param [Hash] args that are passed to filter results
       def list_favourites args= {}
         cond =  args[:type] ?
             self_conditions.merge(favourable_type: args[:type]):

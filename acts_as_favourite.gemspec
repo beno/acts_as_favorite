@@ -12,42 +12,7 @@ Gem::Specification.new do |s|
   s.date = "2012-03-29"
   s.description = "Simple gem that adds functionality to the active record, is possible to add a object to a favourite list"
   s.email = "reis.ivo@gmail.com"
-  s.extra_rdoc_files = [
-    "LICENSE.txt",
-    "README.rdoc"
-  ]
-  s.files = [
-    ".document",
-    ".idea/.name",
-    ".idea/.rakeTasks",
-    ".idea/acts_as_favourite.iml",
-    ".idea/dictionaries/dasssss.xml",
-    ".idea/encodings.xml",
-    ".idea/misc.xml",
-    ".idea/modules.xml",
-    ".idea/scopes/scope_settings.xml",
-    ".idea/vcs.xml",
-    ".idea/workspace.xml",
-    ".rspec",
-    ".rvmrc",
-    "Gemfile",
-    "Gemfile.lock",
-    "LICENSE.txt",
-    "README.rdoc",
-    "Rakefile",
-    "VERSION",
-    "lib/acts_as_favourite.rb",
-    "lib/acts_as_favourite/extenders/favourable.rb",
-    "lib/acts_as_favourite/extenders/favouriter.rb",
-    "lib/acts_as_favourite/favourable.rb",
-    "lib/acts_as_favourite/favourite.rb",
-    "lib/acts_as_favourite/favouriter.rb",
-    "lib/generators/acts_as_favourite/migration/migration_generator.rb",
-    "lib/generators/acts_as_favourite/migration/templates/active_record/migration.rb",
-    "spec/acts_as_favourite_spec.rb",
-    "spec/spec_helper.rb"
-  ]
-  s.homepage = "http://github.com/IvoReis/acts_as_favourite"
+  s.homepage = "http://github.com/ivoreis/acts_as_favourite"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.18"
