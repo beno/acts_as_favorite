@@ -2,48 +2,35 @@ module ActsAsFavourite
   module Extenders
     module Favouriter
 
-      # Get conditions where includes the actual model
-      # @return [Hash] with the conditions
-      def self_conditions
-        {:favouriter_id => self.id,:favouriter_type => self.class.base_class.name.to_s}
-      end
-
       # Favor a given item
       # @param [Favourable] favourable that is favouring this item
-      # @param [Hash] args
       # @return [Bool]
-      def favor favourable, args={}
-        favourable.favor self, args
+      def favor favourable
+        ActsAsFavourite::Favourite.create(favourable: favourable, favouriter: self)
       end
 
-      # favourites type: "Photo" - photos
-      # favourites - all
-      # List the favourites
-      # @param [Hash] args that are passed to filter results
-      def list_favourites args= {}
-        cond =  args[:type] ?
-            self_conditions.merge(favourable_type: args[:type]):
-            self_conditions
-
-        # Get all favourites of this particular favouriter
-        query_result = query_favourites(cond)
-
-        #info{:photo => [1, 2, 3, 4], :car => [1,2,4]}
-        info = query_result.inject({}) do |grouped, entry|
-          grouped[:"#{entry.favourable_type}"] ||= []
-          grouped[:"#{entry.favourable_type}"] <<  Integer("#{entry.favourable_id}")
-          grouped
-        end
-
-        (info.inject([]) do |ret, (key, value) |
-          ret << (key.to_s.classify.constantize).find(value)
-          ret
-        end).flatten
+      def remove_favor favourable
+        ActsAsFavourite::Favourite.where(
+            favourable_id: favourable,
+            favourable_type: favourable.class,
+            favouriter_id: self,
+            favouriter_type: self.class
+        ).delete_all
       end
 
-      def query_favourites  cond
-        ActsAsFavourite::Favourite.order("favourable_type DESC").where(cond).all
+      # List the favourites by type, type can be an [Array]
+      # @param [Hash] type that are passed to filter results
+      # @return [Array] of favourable items
+      def favourites_of type= {}
+         favourites.collect{|favourite| favourite.favourable if Array.wrap(type).include? favourite.favourable_type.to_s.to_sym}
       end
+
+      # List all favourites of this favourites
+      # @return [Array] of favourable items
+      def all_favourites
+        favourites.collect{|favourite| favourite.favourable}
+      end
+
 
     end
   end

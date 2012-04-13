@@ -54,23 +54,19 @@ describe "ActsAsFavourite" do
 
         it "should remove the favourable" do
           lambda{
-            @favouriter.favor @favourable, remove: true
+            @favouriter.remove_favor @favourable
           }.should change(@favourable, :times_favoured).from(1).to(0)
         end
 
-        it "should not remove the favourable" do
-          lambda{
-            @favouriter.favor @favourable
-          }.should_not change(@favourable, :times_favoured)
-        end
 
         context "listing the favourites" do
           it "should return all of them" do
-            @favouriter.list_favourites.should include @favourable, @favourable2
+            @favouriter.all_favourites.should include @favourable, @favourable2
           end
 
           it "should return only filtered favourites" do
-            @favouriter.list_favourites(type: @favourable.class.name).should_not include @favourable2
+            @favouriter.favourites_of(@favourable.class.name.to_sym).should_not include @favourable2
+            @favouriter.favourites_of(@favourable.class.name.to_sym).should include @favourable
           end
        end
     end
