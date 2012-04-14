@@ -1,7 +1,7 @@
 require 'rails/generators/migration'
 
 module ActsAsFavourite
-  class MigrationGenerator < Rails::Generators::Base
+  class InstallGenerator < Rails::Generators::Base
     include Rails::Generators::Migration
 
     desc "Generates migration for favourites (favourites table)"
@@ -24,7 +24,7 @@ module ActsAsFavourite
 
     def create_migration_file
       if self.class.orm_has_migration?
-        migration_template 'migration.rb', 'db/migrate/acts_as_favourite_migration'
+        migration_template 'migration.rb', 'db/migrate/create_favourites'
       end
     end
   end

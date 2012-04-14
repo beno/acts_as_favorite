@@ -1,4 +1,4 @@
-class ActsAsVotableMigration < ActiveRecord::Migration
+class CreateFavourites < ActiveRecord::Migration
   def change
     create_table :favourites, :force => true do |t|
       t.references :favourable, :polymorphic => true
