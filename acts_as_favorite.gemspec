@@ -4,19 +4,19 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "acts_as_favourite"
+  s.name = "acts_as_favorite"
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Ivo Reis"]
   s.date = "2012-03-29"
-  s.description = "Simple gem that adds functionality to the active record, is possible to add a object to a favourite list"
+  s.description = "Simple gem that adds functionality to the active record, is possible to add a object to a favorite list"
   s.email = "reis.ivo@gmail.com"
-  s.homepage = "http://github.com/ivoreis/acts_as_favourite"
+  s.homepage = "http://github.com/ivoreis/acts_as_favorite"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.18"
-  s.summary = "Acts as favourite gem"
+  s.summary = "Acts as favorite gem"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

@@ -1,4 +1,4 @@
-# ActsAsFavourite
+# ActsAsFavorite
 
 ### General information
 
@@ -8,12 +8,12 @@ Adds functionality to models.
 
 To use it, add it to your Gemfile:
 
-    gem 'acts_as_favourite', :git => 'git@github.com:ivoreis/acts_as_favourite.git'
+    gem 'acts_as_favorite', :git => 'git@github.com:ivoreis/acts_as_favorite.git'
     bundle update
 
 ### Post Installation
 
-1. rails g acts_as_favourite:install
+1. rails g acts_as_favorite:install
 2. rake db:migrate
 
 
@@ -23,7 +23,7 @@ To use it, add it to your Gemfile:
 
 ### Testing
 
-ActsAsFavourite uses RSpec for its test coverage
+ActsAsFavorite uses RSpec for its test coverage
 
     rake spec
 

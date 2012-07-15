@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "acts_as_favourite"
-  gem.homepage = "http://github.com/IvoReis/acts_as_favourite"
+  gem.name = "acts_as_favorite"
+  gem.homepage = "http://github.com/IvoReis/acts_as_favorite"
   gem.license = "MIT"
-  gem.summary = %Q{Acts as favourite gem}
-  gem.description = %Q{Simple gem that adds functionality to the active record, is possible to add a object to a favourite list}
+  gem.summary = %Q{Acts as favorite gem}
+  gem.description = %Q{Simple gem that adds functionality to the active record, is possible to add a object to a favorite list}
   gem.email = "reis.ivo@gmail.com"
   gem.authors = ["Ivo Reis"]
   # dependencies defined in Gemfile
@@ -43,7 +43,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "acts_as_favourite #{version}"
+  rdoc.title = "acts_as_favorite #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

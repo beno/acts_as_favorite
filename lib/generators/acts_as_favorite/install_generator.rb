@@ -1,4 +1,4 @@
-class ActsAsFavourite::InstallGenerator < Rails::Generators::Base #:nodoc:
+class ActsAsFavorite::InstallGenerator < Rails::Generators::Base #:nodoc:
   include Rails::Generators::Migration
   source_root File.expand_path('../templates', __FILE__)
   require 'rails/generators/migration'
@@ -12,7 +12,7 @@ class ActsAsFavourite::InstallGenerator < Rails::Generators::Base #:nodoc:
     @prev_migration_nr.to_s
   end
 
-  argument :name, :type => :string, :default => 'create_favourites'
+  argument :name, :type => :string, :default => 'create_favorites'
   def generate_files
     migration_template 'migration.rb', "db/migrate/#{name}"
   end

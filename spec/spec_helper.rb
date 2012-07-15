@@ -1,6 +1,6 @@
 $LOAD_PATH << File.join(File.dirname(__FILE__), '..', 'lib')
 require 'rspec'
-require 'acts_as_favourite'
+require 'acts_as_favorite'
 require 'logger'
 
 ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
@@ -8,58 +8,58 @@ ActiveRecord::Base.logger = Logger.new(File.join(File.dirname(__FILE__),'debug.l
 ActiveRecord::Base.logger.level = Logger::INFO
 
 ActiveRecord::Schema.define(:version => 1) do
-  create_table :favouriters, :force => true do |t|
+  create_table :favoriters, :force => true do |t|
     t.timestamps
   end
 
-  create_table :not_favouriters, :force => true do |t|
+  create_table :not_favoriters, :force => true do |t|
     t.timestamps
   end
 
-  create_table :favourites, :force => true do |t|
-    t.references :favourable, :polymorphic => true
-    t.references :favouriter, :polymorphic => true
+  create_table :favorites, :force => true do |t|
+    t.references :favorable, :polymorphic => true
+    t.references :favoriter, :polymorphic => true
     t.timestamps
   end
 
-  create_table :favourables, :force => true do |t|
+  create_table :favorables, :force => true do |t|
     t.timestamps
   end
 
-  create_table :other_favourables, :force => true do |t|
+  create_table :other_favorables, :force => true do |t|
     t.timestamps
   end
 
-  create_table :not_favourables, :force => true do |t|
+  create_table :not_favorables, :force => true do |t|
     t.timestamps
   end
 
 end
 
 
-class Favouriter < ActiveRecord::Base
-  acts_as_favouriter
+class Favoriter < ActiveRecord::Base
+  acts_as_favoriter
 end
 
-class NotFavouriter < ActiveRecord::Base
+class NotFavoriter < ActiveRecord::Base
 end
 
-class Favourable < ActiveRecord::Base
-  acts_as_favourable
+class Favorable < ActiveRecord::Base
+  acts_as_favorable
 end
 
-class OtherFavourable < ActiveRecord::Base
-  acts_as_favourable
+class OtherFavorable < ActiveRecord::Base
+  acts_as_favorable
 end
 
-class NotFavourable < ActiveRecord::Base
+class NotFavorable < ActiveRecord::Base
 
 end
 
 
 
 def clean_database
-  models = [ActsAsFavourite::Favouriter, Favouriter, Favourable, NotFavourable, NotFavouriter, OtherFavourable]
+  models = [ActsAsfavorite::Favoriter, Favoriter, Favorable, NotFavorable, NotFavoriter, OtherFavorable]
   models.each do |model|
     ActiveRecord::Base.connection.execute "DELETE FROM #{model.table_name}"
   end
