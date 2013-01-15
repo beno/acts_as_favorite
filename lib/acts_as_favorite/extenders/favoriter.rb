@@ -6,17 +6,14 @@ module ActsAsFavorite  #:nodoc:
 
       # Favor a given item
       def favor favorable
-        ActsAsFavorite::Favorite.create(favorable: favorable, favoriter: self)
+        ActsAsFavorite::Favorite.find_or_create(favorable, self)
+        reload && favorable.reload
       end
 
       # Removes the item from the favorable list
       def remove_favor favorable
-        ActsAsFavorite::Favorite.where(
-            favorable_id: favorable,
-            favorable_type: favorable.class,
-            favoriter_id: self,
-            favoriter_type: self.class
-        ).delete_all
+        ActsAsFavorite::Favorite.find_for(favorable, self).delete_all
+        reload && favorable.reload
       end
 
       # List the favorites by type, type can be an [Array]

@@ -23,10 +23,15 @@ module ActsAsFavorite #:nodoc:
         def self.favorable?
           true
         end
+        
+        def self.favored_by(favoriter)
+          self.includes(:favorites).where(favorites: {favoriter_id: favoriter.id})
+        end
 
         class_eval do
           include ActsAsFavorite::Extenders::Favorable
           # Models have the favorable ability?
+
           def favorable?
             true
           end

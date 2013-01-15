@@ -6,17 +6,14 @@ module ActsAsFavorite  #:nodoc:
 
       # Create a new favorite using this favoriter
       def favor favoriter
-        ActsAsFavorite::favorite.create(favorable: self, favoriter: favoriter)
+        ActsAsFavorite::Favorite.find_or_create(self, favoriter)
+        reload && favoriter.reload
       end
 
       # Removes a favorite using this favoriter
       def remove_favor favoriter
-        ActsAsFavorite::favorite.where(
-            favorable_id: self,
-            favorable_type: self.class,
-            favoriter_id: favoriter,
-            favoriter_type: favoriter.class
-        ).delete_all
+        ActsAsFavorite::Favorite.find_for(self, favoriter).delete_all
+        reload && favoriter.reload
       end
 
       # Check if the favoriter already favored this item
